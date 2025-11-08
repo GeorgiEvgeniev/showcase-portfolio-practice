@@ -1,0 +1,215 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to top left, #99ff66 0%, #00cc66 100%);
+    height: 100vh;
+}
+
+* {
+    font-family: 'Roboto Slab', serif;
+}
+
+/* PROFILE */
+.card-body {
+    width: 24vw;
+    height: 36vw;
+    background-color: #ffffff;
+    position: absolute;
+    top: calc((100vh - 36vw)/2);
+    left: 19vw;
+    border-radius: 0.2vw;
+    text-align: center;
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 0.5px 0px rgba(0, 0, 0, 0.06),
+        0 0.3px 0.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12);
+    z-index: 5;
+}
+
+.profile-image {
+    width: 100%;
+    border-radius: 0.2vw;
+    display: block;
+}
+
+.btn-contact {
+    background-color: #ffffff;
+    color: #323232;
+    padding: 0.7vw 1.4vw;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2vw;
+    cursor: pointer;
+    border: 2px solid #f7f7f7;
+    border-radius: 0.2vw;
+    margin-top: 3.5vw;
+}
+
+.btn-contact:hover {
+    color: #78cc6d;
+    transition: 0.4s;
+    border: 2px solid #ededed;
+}
+
+/* TEXTS */
+.text-size-title {
+    font-size: 2vw;
+}
+
+.text-side-medium {
+    font-size: 1.5vw;
+}
+
+.text-content-title {
+    font-size: 1.7vw;
+}
+
+.text-content-regular {
+    font-size: 1vw;
+    color: #474747;
+}
+
+/* MENU */
+.card-menu {
+    width: 6vw;
+    position: absolute;
+    top: calc((100vh - 36vw)/2 + 1vw);
+    left: 12.5vw;
+    background-color: #ffffff;
+    border-radius: 0.4vw;
+    text-align: center;
+    box-shadow:
+        0 1.8px 1.2px rgba(0, 0, 0, 0.034),
+        0 5.7px 4.3px rgba(0, 0, 0, 0.048),
+        0 11.5px 9px rgba(0, 0, 0, 0.06),
+        0 21.3px 16.9px rgba(0, 0, 0, 0.072),
+        0 40.8px 32.4px rgba(0, 0, 0, 0.086),
+        0 10px 10px rgba(0, 0, 0, 0.12);
+}
+
+.menu-item-inactive {
+    font-size: 0.9vw;
+    color: #323232;
+    width: 100%;
+    display: block;
+    padding-top: 1.4vw;
+    cursor: pointer;
+}
+
+.menu-item-inactive:hover {
+    color: #78cc6d;
+    transition: 0.4s;
+}
+
+.menu-item-inactive img {
+    display: inline-block;
+    width: 33%;
+}
+
+.menu-item-inactive span {
+    display: block;
+    margin-top: 0.2vw;
+}
+
+.menu-separator {
+    height: 1px;
+    background-color: #ededed;
+    width: 85%;
+    margin-left: 15%;
+    margin-top: 1vw;
+}
+
+.menu-item-active {
+    font-size: 0.9vw;
+    color: #78cc6d;
+    width: 100%;
+    display: block;
+    padding-top: 1.4vw;
+    cursor: pointer;
+}
+
+.menu-item-active img {
+    display: inline-block;
+    width: 33%;
+}
+
+.menu-item-active span {
+    display: block;
+    margin-top: 0.2vw;
+}
+
+.menu-link {
+    text-decoration: none;
+}
+
+/* CONTENT */
+.content-body {
+    position: absolute;
+    width: 48vw;
+    height: 34vw;
+    top: calc((100vh - 36vw)/2 + 1vw);
+    left: 43vw;
+    background-color: #ffffff;
+    border-top-right-radius: 0.2vw;
+    border-bottom-right-radius: 0.2vw;
+    overflow-y: auto;
+    box-shadow:
+        0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+        0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+        0 12.5px 10px rgba(0, 0, 0, 0.06),
+        0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+        0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+        0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.content-title-wrap {
+    width: 100%;
+    padding-top: 1vw;
+    border-bottom: 1px solid #dedede;
+    height: 3.3vw;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #ffffff;
+}
+
+.conent-wrap {
+    position: absolute;
+    left: 0;
+    top: 4.3vw;
+    width: calc(100% - 2vw);
+    padding: 1vw;
+}
+
+/* IMAGES */
+.image-content {
+    width: 100%;
+    display: block;
+    margin-top: 0.4vw;
+    margin-bottom: 0.4vw;
+    border-radius: 0.4vw;
+    border: 1px solid #cccccc;
+}
+
+/* SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+    width: 0.5vw;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 0.2vw;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #71ad7d; 
+    border-radius: 0.2vw;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #71ad7d; 
+}
