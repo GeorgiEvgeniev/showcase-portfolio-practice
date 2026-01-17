@@ -3,70 +3,376 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./styles/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
-    <title>Home page</title>
+    <meta name="description" content="Georgi Evgeniev - ICT & Media Design Student at Fontys. Creative developer specializing in web development and digital design.">
+    <meta name="keywords" content="web developer, ICT, media design, Fontys, portfolio, Georgi Evgeniev">
+    <meta name="author" content="Georgi Evgeniev">
+    
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Georgi Evgeniev | Creative Developer">
+    <meta property="og:description" content="ICT & Media Design Student at Fontys. Building digital experiences that matter.">
+    <meta property="og:type" content="website">
+    
+    <title>Georgi Evgeniev | Creative Developer</title>
+    
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🟢</text></svg>">
 </head>
 <body>
-    <div class="card-menu">
-        <a href="./index.html" class="menu-link">
-            <div class="menu-item-active">
-                <img src="./images/icon-profile-green.png" rel=""/>
-                <span>Home</span>
-                <div class="menu-separator"></div>
-            </div>
-        </a>
-        <a href="./pages/assignment1.html" class="menu-link">
-            <div class="menu-item-inactive">
-                <img src="./images/icon-assignment.png" rel=""/>
-                <span>Project 1</span>
-                <div class="menu-separator"></div>
-            </div>
-        </a>
-        <a href="./pages/assignment2.html" class="menu-link">
-            <div class="menu-item-inactive">
-                <img src="./images/icon-assignment.png" rel=""/>
-                <span>Project 2</span>
-                <div class="menu-separator"></div>
-            </div>
-        </a>
-        <a href="./pages/assignment3.html" class="menu-link">
-            <div class="menu-item-inactive">
-                <img src="./images/icon-assignment.png" rel=""/>
-                <span>Project 3</span>
-                <div class="menu-separator"></div>
-            </div>
-        </a>
-        <a href="./pages/assignment4.html" class="menu-link">
-            <div class="menu-item-inactive">
-                <img src="./images/icon-assignment.png" rel=""/>
-                <span>Project 4</span>
-                <div class="menu-separator"></div>
-            </div>
-        </a>
-        <a href="./pages/contacts.html" class="menu-link">
-            <div class="menu-item-inactive" style="padding-bottom: 1.4vw;">
-                <img src="./images/icon-contact.png" rel=""/>
-                <span>Contact</span>
-            </div>
-        </a>
-    </div>
-
-    <div class="card-body">
-        <img class="profile-image" src="./images/georgi.png" alt="" />
-        <span class="text-size-title" style="display: block; margin-top: 2vw;">Georgi Evgeniev</span>
-        <span class="text-side-medium" style="display: block; margin-top: 0.2vw; color: #78cc6d;">ICT & Media Design Student</span>
-        <a href="./pages/contacts.html"><button class="btn-contact">CONTACT ME</button></a>
-    </div>
-
-    <div class="content-body">
-        <div class="content-title-wrap">
-            <span class="text-content-title" style="color: #323232; margin-left: 1vw;">H</span><span class="text-content-title" style="color: #78cc6d;">ome</span>
+    <!-- Grain Overlay -->
+    <div class="grain-overlay"></div>
+    
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="#" class="nav-logo">G<span>.</span>E</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-toggle" id="navToggle" onclick="toggleNav()">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-        <div class="conent-wrap">
-            <span class="text-content-regular">Welcome to my homepage! This is my portfolio.</span>
-        </div>
-    </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="hero-subtitle">ICT & Media Design</span>
+                <h1 class="hero-title">
+                    Hi, I'm<br>
+                    <span class="highlight">Georgi</span><br>
+                    Evgeniev
+                </h1>
+                <p class="hero-description">
+                    A passionate ICT & Media Design student at Fontys University of Applied Sciences. 
+                    I craft digital experiences that blend creativity with technical excellence, 
+                    turning complex problems into elegant solutions.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        View My Work
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <div class="hero-image-container">
+                    <div class="hero-image-frame"></div>
+                    <img src="images/profile.jpg" alt="Georgi Evgeniev" class="hero-image">
+                    <span class="hero-image-decoration">GE</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="section-header">
+            <span class="section-label">Who I Am</span>
+            <h2 class="section-title">About Me</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>
+                    I'm currently pursuing ICT & Media Design at Fontys University of Applied Sciences, 
+                    where I'm developing a strong foundation in both technical development and creative design principles.
+                </p>
+                <p>
+                    My approach combines analytical thinking with creative problem-solving. I believe that 
+                    the best digital products are born from the intersection of technology and human-centered design.
+                    I'm constantly learning and pushing myself to stay current with industry trends and emerging technologies.
+                </p>
+                <p>
+                    When I'm not coding or designing, you can find me exploring new technologies, 
+                    contributing to open-source projects, or working on personal projects that challenge me to grow.
+                </p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">2+</div>
+                        <div class="stat-label">Years Learning</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">Curiosity</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Dedication</div>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-section">
+                <div class="skills-grid">
+                    <div class="skill-tag">HTML5</div>
+                    <div class="skill-tag">CSS3 / SASS</div>
+                    <div class="skill-tag">JavaScript</div>
+                    <div class="skill-tag">React</div>
+                    <div class="skill-tag">TypeScript</div>
+                    <div class="skill-tag">Node.js</div>
+                    <div class="skill-tag">UI/UX Design</div>
+                    <div class="skill-tag">Figma</div>
+                    <div class="skill-tag">Git / GitHub</div>
+                    <div class="skill-tag">Responsive Design</div>
+                    <div class="skill-tag">Adobe Suite</div>
+                    <div class="skill-tag">Agile / Scrum</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="section-header">
+            <span class="section-label">My Work</span>
+            <h2 class="section-title">Featured Projects</h2>
+        </div>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <article class="project-card">
+                <div class="project-image">
+                    <span class="project-placeholder">01</span>
+                </div>
+                <div class="project-content">
+                    <span class="project-category">Web Application</span>
+                    <h3 class="project-title">EcoTrack Dashboard</h3>
+                    <p class="project-description">
+                        A sustainability tracking dashboard that helps users monitor their carbon footprint. 
+                        Features real-time data visualization, personalized recommendations, and progress tracking 
+                        with an intuitive interface designed for everyday use.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Chart.js</span>
+                        <span class="tech-tag">Node.js</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            Code
+                        </a>
+                        <a href="#" class="project-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Live Demo
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="project-card">
+                <div class="project-image">
+                    <span class="project-placeholder">02</span>
+                </div>
+                <div class="project-content">
+                    <span class="project-category">Mobile App Design</span>
+                    <h3 class="project-title">FitFlow Companion</h3>
+                    <p class="project-description">
+                        A fitness companion app designed to make workout tracking seamless and engaging. 
+                        Features include custom workout plans, progress analytics, social challenges, 
+                        and integration with wearable devices for comprehensive health monitoring.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Figma</span>
+                        <span class="tech-tag">React Native</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">REST API</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            Code
+                        </a>
+                        <a href="#" class="project-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Case Study
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="project-card">
+                <div class="project-image">
+                    <span class="project-placeholder">03</span>
+                </div>
+                <div class="project-content">
+                    <span class="project-category">E-Commerce</span>
+                    <h3 class="project-title">Artisan Marketplace</h3>
+                    <p class="project-description">
+                        An online marketplace platform connecting local artisans with customers worldwide. 
+                        Built with a focus on storytelling, featuring artist profiles, secure payments, 
+                        and a curated shopping experience that celebrates craftsmanship.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                        <span class="tech-tag">Stripe</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                            </svg>
+                            Code
+                        </a>
+                        <a href="#" class="project-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                            Live Demo
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="section-header">
+            <span class="section-label">Get in Touch</span>
+            <h2 class="section-title">Let's Work Together</h2>
+        </div>
+        <div class="contact-content">
+            <p class="contact-text">
+                I'm always open to discussing new projects, creative ideas, or opportunities 
+                to be part of your vision. Whether you have a question or just want to say hi, 
+                feel free to reach out!
+            </p>
+            <div class="contact-links">
+                <a href="mailto:g.evgeniev@student.fontys.nl" class="contact-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    Email Me
+                </a>
+                <a href="https://www.linkedin.com/in/georgi-evgeniev-494337287/" target="_blank" rel="noopener noreferrer" class="contact-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/GeorgiEvgeniev" target="_blank" rel="noopener noreferrer" class="contact-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                    GitHub
+                </a>
+            </div>
+            <a href="mailto:g.evgeniev@student.fontys.nl" class="contact-email">g.evgeniev@student.fontys.nl</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p class="footer-text">© 2025 Georgi Evgeniev. Designed & Built with passion.</p>
+        <div class="footer-socials">
+            <a href="https://www.linkedin.com/in/georgi-evgeniev-494337287/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+            </a>
+            <a href="https://github.com/GeorgiEvgeniev" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+            </a>
+            <a href="mailto:g.evgeniev@student.fontys.nl" aria-label="Email">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile navigation toggle
+        function toggleNav() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile nav if open
+                    document.getElementById('navLinks').classList.remove('active');
+                }
+            });
+        });
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('.nav');
+            if (window.scrollY > 100) {
+                nav.style.background = 'rgba(10, 10, 10, 0.98)';
+            } else {
+                nav.style.background = 'linear-gradient(to bottom, rgba(10, 10, 10, 0.95), transparent)';
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe project cards and sections
+        document.querySelectorAll('.project-card, .about-text, .skills-section').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
